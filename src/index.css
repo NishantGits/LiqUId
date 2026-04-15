@@ -1,39 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  --color-liquid-blue: #3b82f6;
-  --color-liquid-cyan: #06b6d4;
-  --color-liquid-purple: #8b5cf6;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 187 92% 41%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 262 83% 58%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 
-  --radius-xl: 1.5rem;
-  --radius-2xl: 2rem;
-  --radius-3xl: 3rem;
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 0 0% 98%;
+    --card: 222 47% 7%;
+    --card-foreground: 0 0% 98%;
+    --popover: 222 47% 7%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 222 47% 11%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 222 47% 11%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 47% 15%;
+    --input: 222 47% 15%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 187 92% 41%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 222 47% 5%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 47% 11%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 222 47% 15%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
 
 @layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
   body {
-    @apply bg-neutral-950 text-neutral-100 antialiased selection:bg-liquid-cyan/30;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 
 @layer utilities {
-  .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
-  }
-  
-  .glass-dark {
-    @apply bg-black/40 backdrop-blur-2xl border border-white/5;
+  .font-display {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-liquid-blue via-liquid-cyan to-liquid-purple;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3b82f6] via-[#06b6d4] to-[#8b5cf6];
   }
 
+  /* LiqUId Glass Utility */
+  .glass {
+    @apply bg-white/40 dark:bg-white/5 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+
+  /* Glossy Card */
   .glossy-card {
-    @apply relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 shadow-2xl transition-all duration-500 hover:border-white/20 hover:shadow-liquid-cyan/10;
+    @apply rounded-3xl border border-white/30 dark:border-white/10 bg-gradient-to-br from-white/60 to-white/20 dark:from-white/10 dark:to-white/5 shadow-2xl backdrop-blur-md transition-all duration-500;
+  }
+
+  .glossy-card:hover {
+    @apply -translate-y-1 shadow-[0_20px_60px_rgba(6,182,212,0.15)] border-white/40 dark:border-white/20;
+  }
+
+  .liquid-glow {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.2), 0 0 80px rgba(6, 182, 212, 0.15);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3b82f6] via-[#06b6d4] to-[#8b5cf6];
+  }
+
+  /* Theme Utilities */
+  .bg-theme-primary {
+    background-color: var(--theme-primary);
+  }
+  .bg-theme-secondary {
+    background-color: var(--theme-secondary);
+  }
+  .text-theme-primary {
+    color: var(--theme-primary);
+  }
+  .text-theme-secondary {
+    color: var(--theme-secondary);
+  }
+  .border-theme-primary {
+    border-color: var(--theme-primary);
+  }
+  .border-theme-secondary {
+    border-color: var(--theme-secondary);
+  }
+  .rounded-theme {
+    border-radius: var(--theme-border-radius);
+  }
+  .font-theme {
+    font-family: var(--theme-font-family);
+  }
+  .shadow-theme-primary {
+    --tw-shadow-color: var(--theme-primary);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+  .shadow-theme-secondary {
+    --tw-shadow-color: var(--theme-secondary);
+    --tw-shadow: var(--tw-shadow-colored);
   }
 }
