@@ -61,7 +61,7 @@ function KitsContent() {
           >
             {kit.available ? (
               <Link
-                to={createPageUrl(kit.id === 'icons' ? 'IconKit' : 'KitsStandard')}
+                to={createPageUrl(kit.id === 'icons' ? 'kits/icon' : 'kits/standard')}
                 className="block rounded-3xl p-8 group transition-all duration-500 hover:shadow-2xl"
                 style={{ background: cardBg, border: cardBorder, backdropFilter: 'blur(20px)', boxShadow: shadow }}
               >
@@ -153,7 +153,7 @@ function KitsContent() {
 
 export default function KitsPage() {
   return (
-    <PageShell backTo="Home" backLabel="Home">
+    <PageShell backTo="home" backLabel="Home">
       <KitsContent />
     </PageShell>
   );

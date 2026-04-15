@@ -8,7 +8,7 @@ export const emails = [
       <div className="max-w-lg bg-white border rounded-lg p-6 text-sm">
         <div className="text-center mb-6">
           <div className="w-12 h-12 bg-theme-primary rounded-full mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold">Welcome to FluidUI!</h2>
+          <h2 className="text-2xl font-bold">Welcome to LiqUId!</h2>
         </div>
         <p className="mb-4">Hi John,</p>
         <p className="mb-4">Thanks for signing up! We're excited to have you.</p>
@@ -30,7 +30,7 @@ export const emails = [
     <tr>
       <td style="padding: 40px; text-align: center;">
         <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); border-radius: 50%; margin: 0 auto 20px;"></div>
-        <h1 style="margin: 0 0 20px; font-size: 28px; color: #111827;">Welcome to FluidUI!</h1>
+        <h1 style="margin: 0 0 20px; font-size: 28px; color: #111827;">Welcome to LiqUId!</h1>
         <p style="margin: 0 0 16px; color: #6b7280; font-size: 16px;">Hi John,</p>
         <p style="margin: 0 0 30px; color: #6b7280; font-size: 16px;">Thanks for signing up! We're excited to have you on board.</p>
         <a href="#" style="display: inline-block; padding: 14px 28px; background-color: #6366f1; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600;">Get Started</a>
@@ -290,7 +290,7 @@ export const emails = [
     component: (
       <div className="max-w-lg bg-white border rounded-lg p-6 text-sm">
         <h2 className="text-xl font-bold mb-4">You're Invited!</h2>
-        <p className="mb-4 text-slate-600">John Doe invited you to join their team on FluidUI.</p>
+        <p className="mb-4 text-slate-600">John Doe invited you to join their team on LiqUId.</p>
         <div className="flex gap-3">
           <a href="#" className="px-6 py-2 bg-emerald-600 text-white rounded-lg font-medium">Accept</a>
           <a href="#" className="px-6 py-2 border border-slate-300 text-slate-700 rounded-lg font-medium">Decline</a>
@@ -304,7 +304,7 @@ export const emails = [
   <table role="presentation" style="max-width: 600px; margin: 0 auto; background: #fff; border-radius: 8px; padding: 40px;">
     <tr><td>
       <h1 style="margin: 0 0 20px; font-size: 24px; color: #111827;">You're Invited!</h1>
-      <p style="margin: 0 0 24px; color: #6b7280;">John Doe invited you to join their team on FluidUI.</p>
+      <p style="margin: 0 0 24px; color: #6b7280;">John Doe invited you to join their team on LiqUId.</p>
       <table>
         <tr>
           <td>

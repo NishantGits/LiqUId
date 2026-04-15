@@ -7,7 +7,7 @@ export default function Logo({ className = "w-8 h-8" }) {
     <img
       src="https://media.db.com/images/public/693546c184eb8ff23ef98820/412ad358a_IMG_0934.jpeg"
       className={className}
-      alt="CanvasUI Logo"
+      alt="LiqUId Logo"
       style={{ borderRadius: '6px', objectFit: 'cover' }}
     />
   );

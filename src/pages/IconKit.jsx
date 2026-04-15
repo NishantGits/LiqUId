@@ -12,6 +12,7 @@ function IconKitContent() {
   const [searchQuery, setSearchQuery]       = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [copiedId, setCopiedId]             = useState(null);
+  const [iconVersion, setIconVersion]       = useState('mono'); // mono, d3
 
   const filteredIcons = useMemo(() =>
     fluentIcons.filter(icon => {
@@ -22,19 +23,22 @@ function IconKitContent() {
     [searchQuery, selectedCategory]
   );
 
-  const isEmoji = (icon) => icon.category === 'Emoji' || icon.url.includes('fluentui-emoji');
+  const getIconUrl = (icon) => icon[iconVersion] || icon.mono;
 
   const handleCopy = (icon) => {
-    navigator.clipboard.writeText(icon.url);
+    const url = getIconUrl(icon);
+    navigator.clipboard.writeText(url);
     setCopiedId(icon.id);
-    toast.success(`${icon.name} URL copied!`);
+    toast.success(`${icon.name} (${iconVersion}) URL copied!`);
     setTimeout(() => setCopiedId(null), 2000);
   };
 
   const handleDownload = (icon) => {
+    const url = getIconUrl(icon);
     const a = document.createElement('a');
-    a.href = icon.url;
-    a.download = `${icon.name.toLowerCase().replace(/ /g, '-')}-icon${isEmoji(icon) ? '.png' : '.svg'}`;
+    a.href = url;
+    const ext = url.includes('.png') ? '.png' : '.svg';
+    a.download = `${icon.name.toLowerCase().replace(/ /g, '-')}-${iconVersion}${ext}`;
     a.target = '_blank';
     a.click();
     toast.success(`${icon.name} downloading!`);
@@ -48,30 +52,53 @@ function IconKitContent() {
       {/* Hero */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
         <h1 className="font-display font-black text-4xl sm:text-5xl tracking-tight mb-4" style={{ color: fg }}>
-          Fluent UI{' '}
+          LiqUId{' '}
           <span style={{ background: 'linear-gradient(90deg,#3b82f6,#06b6d4)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Icons</span>
         </h1>
         <p className="text-lg font-light mb-8" style={{ color: muted }}>
-          Real Microsoft Fluent UI SVG system icons + 3D emoji PNGs
+          Premium SVG system icons + 3D emoji assets for your next project
         </p>
+
+        {/* Version Toggle */}
+        <div className="flex justify-center mb-10">
+          <div className="inline-flex p-1 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 backdrop-blur-xl">
+            {[
+              { id: 'mono', label: 'Mono', desc: 'Minimal Style' },
+              { id: 'd3', label: 'Color 3D', desc: 'Premium 3D' }
+            ].map((v) => (
+              <button
+                key={v.id}
+                onClick={() => setIconVersion(v.id)}
+                className={`px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 flex flex-col items-center ${
+                  iconVersion === v.id 
+                    ? 'bg-white dark:bg-white/10 shadow-lg text-theme-primary' 
+                    : 'text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'
+                }`}
+              >
+                <span>{v.label}</span>
+                <span className="text-[10px] opacity-60 font-medium">{v.desc}</span>
+              </button>
+            ))}
+          </div>
+        </div>
 
         {/* Search */}
         <div className="relative max-w-3xl mx-auto mb-8">
           <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-5 h-5" style={{ color: muted }} />
           <input
             type="text"
-            placeholder="Search icons… (e.g., folder, heart, game)"
+            placeholder="Search 200+ icons… (e.g., folder, heart, game)"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-14 pr-12 py-4 text-base rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#3b82f6] transition-all duration-300"
+            className="w-full pl-14 pr-12 py-5 text-lg rounded-3xl focus:outline-none focus:ring-2 focus:ring-[#3b82f6] transition-all duration-300 shadow-xl"
             style={{
               background: cardBg, border: cardBorder, backdropFilter: 'blur(20px)',
               color: fg,
             }}
           />
           {searchQuery && (
-            <button onClick={() => setSearchQuery('')} className="absolute right-5 top-1/2 -translate-y-1/2 transition-colors hover:text-[#3b82f6]" style={{ color: muted }}>
-              <X className="w-5 h-5" />
+            <button onClick={() => setSearchQuery('')} className="absolute right-6 top-1/2 -translate-y-1/2 transition-colors hover:text-[#3b82f6]" style={{ color: muted }}>
+              <X className="w-6 h-6" />
             </button>
           )}
         </div>
@@ -83,7 +110,7 @@ function IconKitContent() {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}
-              className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300"
+              className="px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300"
               style={
                 selectedCategory === cat
                   ? { background: 'linear-gradient(135deg,#3b82f6,#06b6d4)', color: '#fff', boxShadow: '0 4px 15px rgba(59,130,246,0.3)' }
@@ -97,53 +124,55 @@ function IconKitContent() {
       </motion.div>
 
       {/* Count */}
-      <p className="text-center mb-6 text-sm" style={{ color: muted }}>
-        Showing <span className="font-bold" style={{ color: fg }}>{filteredIcons.length}</span> icons
+      <p className="text-center mb-8 text-sm" style={{ color: muted }}>
+        Showing <span className="font-bold" style={{ color: fg }}>{filteredIcons.length}</span> icons in <span className="text-theme-primary font-bold">{iconVersion}</span> style
       </p>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
         {filteredIcons.map((icon, index) => (
           <motion.div
             key={icon.id}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: Math.min(index * 0.01, 0.3) }}
-            whileHover={{ y: -4, scale: 1.02 }}
-            className="rounded-3xl overflow-hidden group transition-all duration-500"
+            whileHover={{ y: -8, scale: 1.02 }}
+            className="rounded-[2.5rem] overflow-hidden group transition-all duration-500"
             style={{
               background: cardBg, border: cardBorder, backdropFilter: 'blur(20px)',
-              boxShadow: dark ? '0 4px 16px rgba(0,0,0,0.3)' : '0 4px 16px rgba(31,38,135,0.07)',
+              boxShadow: dark ? '0 8px 32px rgba(0,0,0,0.4)' : '0 8px 32px rgba(31,38,135,0.08)',
             }}
           >
-            <div className="aspect-square p-6 flex items-center justify-center">
+            <div className="aspect-square p-8 flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-theme-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img
-                src={icon.url} alt={icon.name}
-                className={`object-contain transition-transform duration-500 group-hover:scale-110 ${isEmoji(icon) ? 'w-16 h-16' : 'w-12 h-12'}`}
+                src={getIconUrl(icon)} alt={icon.name}
+                className={`object-contain transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 ${icon.category === 'Emoji' ? 'w-20 h-20' : 'w-14 h-14'}`}
                 loading="lazy"
                 onError={(e) => { e.target.style.opacity = '0.2'; }}
               />
             </div>
-            <div className="p-4" style={{ borderTop: dark ? '1px solid rgba(255,255,255,0.07)' : '1px solid rgba(0,0,0,0.05)' }}>
-              <div className="flex items-center justify-between mb-3">
-                <p className="text-sm font-semibold truncate" style={{ color: fg }}>{icon.name}</p>
-                <span className="text-xs px-2 py-0.5 rounded-full ml-1 flex-shrink-0" style={{ background: dark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)', color: muted }}>{icon.category}</span>
+            <div className="p-5" style={{ borderTop: dark ? '1px solid rgba(255,255,255,0.07)' : '1px solid rgba(0,0,0,0.05)' }}>
+              <div className="flex items-center justify-between mb-4">
+                <p className="text-sm font-bold truncate" style={{ color: fg }}>{icon.name}</p>
+                <span className="text-[10px] px-2 py-1 rounded-lg ml-1 flex-shrink-0 font-black uppercase tracking-wider" style={{ background: dark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)', color: muted }}>{icon.category}</span>
               </div>
               <div className="flex gap-2">
                 <button
                   onClick={() => handleCopy(icon)}
-                  className="flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-300"
+                  className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-xs font-bold transition-all duration-300"
                   style={{ background: dark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.05)', color: muted, border: cardBorder }}
                 >
-                  {copiedId === icon.id ? <><Check className="w-3 h-3 text-[#06b6d4]" /> Copied</> : <><Copy className="w-3 h-3" /> Copy</>}
+                  {copiedId === icon.id ? <Check className="w-3.5 h-3.5 text-[#06b6d4]" /> : <Copy className="w-3.5 h-3.5" />}
+                  {copiedId === icon.id ? 'Copied' : 'Copy'}
                 </button>
                 <button
                   onClick={() => handleDownload(icon)}
-                  className="flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-lg text-xs font-medium text-white transition-all duration-300 hover:opacity-90"
+                  className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-xs font-bold text-white transition-all duration-300 hover:shadow-lg hover:shadow-theme-primary/25 active:scale-95"
                   style={{ background: 'linear-gradient(135deg,#3b82f6,#06b6d4)' }}
                 >
-                  <Download className="w-3 h-3" />
-                  {isEmoji(icon) ? 'PNG' : 'SVG'}
+                  <Download className="w-3.5 h-3.5" />
+                  {getIconUrl(icon).includes('.png') ? 'PNG' : 'SVG'}
                 </button>
               </div>
             </div>
@@ -162,7 +191,7 @@ function IconKitContent() {
 
 export default function IconKitPage() {
   return (
-    <PageShell backTo="Kits" backLabel="Back to Kits">
+    <PageShell backTo="kits" backLabel="Back to Kits">
       <IconKitContent />
     </PageShell>
   );

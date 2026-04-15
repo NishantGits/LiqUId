@@ -5,20 +5,22 @@ import Kits from './pages/Kits';
 import KitsStandard from './pages/KitsStandard';
 import LandingKit from './pages/LandingKit';
 import Home from './pages/Home';
+import Contribution from './pages/Contribution';
 import __Layout from './Layout.jsx';
 
 export const PAGES = {
-    "Components": Components,
-    "Docs": Docs,
-    "IconKit": IconKit,
-    "Kits": Kits,
-    "KitsStandard": KitsStandard,
-    "LandingKit": LandingKit,
-    "Home": Home,
+    "components": Components,
+    "docs": Docs,
+    "kits/icon": IconKit,
+    "kits": Kits,
+    "kits/standard": KitsStandard,
+    "landing": LandingKit,
+    "home": Home,
+    "contribution": Contribution,
 }
 
 export const pagesConfig = {
-    mainPage: "Home",
+    mainPage: "home",
     Pages: PAGES,
     Layout: __Layout,
 };

@@ -16,7 +16,7 @@ export const defaultThemes = {
     primary: '#4f46e5',
     secondary: '#8b5cf6',
     fontFamily: 'system-ui, -apple-system, sans-serif',
-    borderRadius: '0.75rem'
+    borderRadius: '1.25rem'
   },
   ocean: {
     name: 'Ocean',

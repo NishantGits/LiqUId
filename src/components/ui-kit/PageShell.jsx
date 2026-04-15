@@ -38,9 +38,9 @@ export function LiqUIdWordmark({ dark, size = 'text-xl' }) {
 }
 
 const navLinks = [
-  { label: 'Components', to: 'KitsStandard' },
-  { label: 'Templates',  to: 'Kits' },
-  { label: 'Docs',       to: 'Docs' },
+  { label: 'Components',   to: 'kits/standard' },
+  { label: 'Contribution', to: 'contribution' },
+  { label: 'Docs',         to: 'docs' },
 ];
 
 export default function PageShell({ children, backTo, backLabel, stickyUntilFooter, hideFooter }) {
@@ -135,7 +135,7 @@ export default function PageShell({ children, backTo, backLabel, stickyUntilFoot
                   {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
                 </button>
                 <a
-                  href="https://github.com" target="_blank" rel="noopener noreferrer"
+                  href="https://github.com/NishantGits/LiqUId" target="_blank" rel="noopener noreferrer"
                   className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105"
                   style={{ background: dark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.06)', color: fg, border: dark ? '1px solid rgba(255,255,255,0.1)' : '1px solid rgba(0,0,0,0.1)' }}
                 >
@@ -160,7 +160,7 @@ export default function PageShell({ children, backTo, backLabel, stickyUntilFoot
                 </div>
                 <LiqUIdWordmark dark={dark} size="text-base" />
               </div>
-              <p className="text-sm font-light" style={{ color: dark ? '#475569' : '#94a3b8' }}>© 2026 LiqUId. All rights reserved.</p>
+              <p className="text-sm font-light" style={{ color: dark ? '#475569' : '#94a3b8' }}>© 2026 LiqUId and NishantGits. All rights reserved.</p>
             </div>
           </footer>
         )}

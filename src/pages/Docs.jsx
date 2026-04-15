@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion } from 'framer-motion';
 import {
-  BookOpen, Copy, Check, Code, Palette, Zap, Download,
-  FileCode, Terminal, Package, Sparkles, CheckCircle, ArrowRight
+  BookOpen, Copy, Check, Code, Palette, Download,
+  FileCode, Terminal, Package, Sparkles, CheckCircle
 } from 'lucide-react';
 import { toast } from 'sonner';
 import PageShell, { useDarkMode } from '../components/ui-kit/PageShell';
@@ -310,7 +310,7 @@ export default MyPage;`;
         <GlassCard>
           <ol className="space-y-5 mb-6">
             {[
-              ['Browse Components', <>Go to the <Link to={createPageUrl('KitsStandard')} className="text-[#3b82f6] hover:underline">Component Kit</Link> and find what you need.</>],
+              ['Browse Components', <>Go to the <Link to={createPageUrl('kits/standard')} className="text-[#3b82f6] hover:underline">Component Kit</Link> and find what you need.</>],
               ['Click "View Code"', 'Expand the code panel below the component preview.'],
               ['Copy the Code',     'Hit the Copy button to grab the full source.'],
               ['Paste & Customize', 'Paste into your project and tweak colors, text, and spacing.'],
@@ -428,14 +428,14 @@ export default MyPage;`;
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to={createPageUrl('Kits')}
+              to={createPageUrl('kits')}
               className="px-7 py-3.5 rounded-full font-semibold text-sm transition-all hover:scale-105"
               style={{ background: dark ? '#f8fafc' : '#0f172a', color: dark ? '#0f172a' : '#f8fafc' }}
             >
               Browse Kits
             </Link>
             <Link
-              to={createPageUrl('KitsStandard')}
+              to={createPageUrl('kits/standard')}
               className="px-7 py-3.5 rounded-full font-semibold text-sm transition-all hover:scale-105"
               style={{
                 background: dark ? 'rgba(255,255,255,0.08)' : 'rgba(255,255,255,0.9)',
@@ -454,7 +454,7 @@ export default MyPage;`;
 
 export default function DocsPage() {
   return (
-    <PageShell backTo="Home" backLabel="Home">
+    <PageShell backTo="home" backLabel="Home">
       <DocsContent />
     </PageShell>
   );

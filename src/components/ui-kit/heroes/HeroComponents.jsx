@@ -7,7 +7,7 @@ export const heroes = [
     title: 'Centered Hero',
     component: (
       <div className="bg-gradient-to-b from-slate-50 to-white py-20 px-6 text-center max-w-4xl">
-        <h1 className="text-5xl font-bold text-slate-900 mb-6">Build products faster with FluidUI</h1>
+        <h1 className="text-5xl font-bold text-slate-900 mb-6">Build products faster with LiqUId</h1>
         <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">The most beautiful UI component library for React and Tailwind CSS</p>
         <div className="flex gap-4 justify-center">
           <button className="px-6 py-3 bg-theme-primary text-white rounded-theme font-medium hover:opacity-90 transition-all">Get Started</button>
@@ -16,7 +16,7 @@ export const heroes = [
       </div>
     ),
     code: `<div class="bg-gradient-to-b from-slate-50 to-white py-20 px-6 text-center">
-  <h1 class="text-5xl font-bold text-slate-900 mb-6">Build products faster with FluidUI</h1>
+  <h1 class="text-5xl font-bold text-slate-900 mb-6">Build products faster with LiqUId</h1>
   <p class="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">The most beautiful UI component library</p>
   <div class="flex gap-4 justify-center">
     <button class="px-6 py-3 bg-theme-primary text-white rounded-theme font-medium">Get Started</button>
@@ -56,14 +56,14 @@ export const heroes = [
         <div className="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium mb-6">
           ✨ Now with 100+ components
         </div>
-        <h1 className="text-6xl font-bold text-slate-900 mb-6">FluidUI</h1>
+        <h1 className="text-6xl font-bold text-slate-900 mb-6">LiqUId</h1>
         <p className="text-xl text-slate-600 mb-8">Beautiful components for modern web</p>
         <button className="px-8 py-4 bg-slate-900 text-white rounded-xl font-medium">Explore Components</button>
       </div>
     ),
     code: `<div class="py-20 px-6 text-center">
   <span class="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium mb-6">✨ Now with 100+ components</span>
-  <h1 class="text-6xl font-bold text-slate-900 mb-6">FluidUI</h1>
+  <h1 class="text-6xl font-bold text-slate-900 mb-6">LiqUId</h1>
   <p class="text-xl text-slate-600 mb-8">Beautiful components for modern web</p>
   <button class="px-8 py-4 bg-slate-900 text-white rounded-xl font-medium">Explore Components</button>
 </div>`
@@ -132,7 +132,7 @@ export const heroes = [
     component: (
       <div className="py-20 px-6 text-center max-w-4xl">
         <h1 className="text-5xl font-bold text-slate-900 mb-6">See it in action</h1>
-        <p className="text-xl text-slate-600 mb-8">Watch how FluidUI can transform your workflow</p>
+        <p className="text-xl text-slate-600 mb-8">Watch how LiqUId can transform your workflow</p>
         <button className="inline-flex items-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-xl font-medium">
           <Play className="w-5 h-5" /> Watch Demo
         </button>
@@ -140,7 +140,7 @@ export const heroes = [
     ),
     code: `<div class="py-20 px-6 text-center">
   <h1 class="text-5xl font-bold text-slate-900 mb-6">See it in action</h1>
-  <p class="text-xl text-slate-600 mb-8">Watch how FluidUI can transform your workflow</p>
+  <p class="text-xl text-slate-600 mb-8">Watch how LiqUId can transform your workflow</p>
   <button class="inline-flex items-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-xl font-medium">
     ▶ Watch Demo
   </button>
@@ -194,7 +194,7 @@ export const heroes = [
           {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />)}
         </div>
         <h1 className="text-4xl font-bold text-slate-900 mb-4">"The best UI kit I've ever used"</h1>
-        <p className="text-lg text-slate-600 mb-6">FluidUI has saved us countless hours of development time</p>
+        <p className="text-lg text-slate-600 mb-6">LiqUId has saved us countless hours of development time</p>
         <div className="flex items-center gap-3 justify-center">
           <img src="https://i.pravatar.cc/60?img=10" className="w-12 h-12 rounded-full" alt="" />
           <div className="text-left">
@@ -209,7 +209,7 @@ export const heroes = [
     <span class="text-amber-400">⭐⭐⭐⭐⭐</span>
   </div>
   <h1 class="text-4xl font-bold text-slate-900 mb-4">"The best UI kit I've ever used"</h1>
-  <p class="text-lg text-slate-600 mb-6">FluidUI has saved us countless hours</p>
+  <p class="text-lg text-slate-600 mb-6">LiqUId has saved us countless hours</p>
   <div class="flex items-center gap-3 justify-center">
     <img src="https://i.pravatar.cc/60?img=10" class="w-12 h-12 rounded-full" />
     <div class="text-left">

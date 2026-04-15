@@ -209,7 +209,7 @@ export const sections = [
         <div className="absolute bottom-0 left-0 w-60 h-60 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
         <div className="relative z-10">
           <h2 className="text-3xl font-bold mb-4">Ready to get started?</h2>
-          <p className="text-xl text-indigo-100 mb-8 max-w-xl mx-auto">Join thousands of teams already using FluidUI to build amazing products.</p>
+          <p className="text-xl text-indigo-100 mb-8 max-w-xl mx-auto">Join thousands of teams already using LiqUId to build amazing products.</p>
           <div className="flex items-center justify-center gap-4">
             <button className="px-8 py-4 bg-white text-theme-primary font-medium rounded-theme hover:bg-indigo-50 transition-all">Start Free Trial</button>
             <button className="px-8 py-4 bg-theme-primary/20 text-white font-medium rounded-theme hover:bg-theme-primary/30 transition-all border border-white/20">Contact Sales</button>
@@ -300,7 +300,7 @@ export const sections = [
         </div>
         <div className="max-w-2xl mx-auto space-y-4">
           {[
-            { q: 'How do I get started?', a: 'Simply sign up for a free account and you can start using FluidUI immediately. No credit card required.' },
+            { q: 'How do I get started?', a: 'Simply sign up for a free account and you can start using LiqUId immediately. No credit card required.' },
             { q: 'Can I cancel anytime?', a: 'Yes, you can cancel your subscription at any time. No questions asked.' },
             { q: 'Do you offer refunds?', a: 'We offer a 30-day money-back guarantee if you\'re not satisfied with our product.' },
           ].map((faq, i) => (
@@ -340,7 +340,7 @@ export const sections = [
       <div className="w-full bg-slate-900 rounded-theme p-12 text-white">
         <div className="grid grid-cols-4 gap-8 mb-12">
           <div>
-            <span className="text-xl font-bold">FluidUI</span>
+            <span className="text-xl font-bold">LiqUId</span>
             <p className="text-slate-400 mt-4 text-sm">Building beautiful products for the modern web.</p>
           </div>
           <div>
@@ -371,7 +371,7 @@ export const sections = [
           </div>
         </div>
         <div className="border-t border-slate-800 pt-8 flex items-center justify-between">
-          <p className="text-sm text-slate-400">© 2024 FluidUI. All rights reserved.</p>
+          <p className="text-sm text-slate-400">© 2026 LiqUId and NishantGits. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-slate-400 hover:text-theme-primary">Twitter</a>
             <a href="#" className="text-slate-400 hover:text-theme-primary">GitHub</a>
@@ -383,7 +383,7 @@ export const sections = [
     code: `<footer className="w-full bg-slate-900 rounded-theme p-12 text-white">
   <div className="grid grid-cols-4 gap-8 mb-12">
     <div>
-      <span className="text-xl font-bold">FluidUI</span>
+      <span className="text-xl font-bold">LiqUId</span>
       <p className="text-slate-400 mt-4 text-sm">Building beautiful products...</p>
     </div>
     <div>
@@ -396,7 +396,7 @@ export const sections = [
     ...
   </div>
   <div className="border-t border-slate-800 pt-8 flex items-center justify-between">
-    <p className="text-sm text-slate-400">© 2024 FluidUI. All rights reserved.</p>
+    <p className="text-sm text-slate-400">© 2026 LiqUId and NishantGits. All rights reserved.</p>
   </div>
 </footer>`
   },

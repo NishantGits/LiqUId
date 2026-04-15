@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Box, Layers, Type, Layout, Bell, CreditCard,
-  Navigation, LogIn, Users, Award, Search
+  Navigation, LogIn, Users, Award, Search, Filter, ChevronDown
 } from 'lucide-react';
 
 import ComponentCard from '../components/ui-kit/ComponentCard';
@@ -66,12 +66,12 @@ function KitsStandardContent() {
         className="sticky z-40 px-4 sm:px-6 py-3 md:hidden"
         style={{ top: 72, background: dark ? 'rgba(10,10,20,0.8)' : 'rgba(255,255,255,0.8)', backdropFilter: 'blur(20px)', borderBottom: sidebarBorder }}
       >
-        <div className="relative">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: muted }} />
+        <div className="relative group">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 transition-colors group-focus-within:text-theme-primary" style={{ color: muted }} />
           <input
             type="text" placeholder="Search components..." value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-[#3b82f6] transition-all"
+            className="w-full pl-11 pr-4 py-3 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-theme-primary/50 transition-all shadow-sm"
             style={{ background: dark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.05)', border: sidebarBorder, color: fg }}
           />
         </div>
@@ -126,14 +126,24 @@ function KitsStandardContent() {
                 <p className="text-sm font-light" style={{ color: muted }}>{filteredComponents.length} components</p>
               </div>
             </motion.div>
-            <div className="relative w-72">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: muted }} />
-              <input
-                type="text" placeholder="Search components..." value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-[#3b82f6] transition-all"
-                style={{ background: dark ? 'rgba(255,255,255,0.07)' : 'rgba(255,255,255,0.9)', border: sidebarBorder, color: fg, backdropFilter: 'blur(12px)' }}
-              />
+            <div className="flex items-center gap-3">
+              <div className="relative w-72 group">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 transition-colors group-focus-within:text-theme-primary" style={{ color: muted }} />
+                <input
+                  type="text" placeholder="Search components..." value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-11 pr-4 py-3 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-theme-primary/50 transition-all shadow-sm hover:shadow-md"
+                  style={{ background: dark ? 'rgba(255,255,255,0.07)' : 'rgba(255,255,255,0.9)', border: sidebarBorder, color: fg, backdropFilter: 'blur(12px)' }}
+                />
+              </div>
+              <button 
+                className="flex items-center gap-2 px-4 py-3 rounded-2xl text-sm font-bold transition-all border hover:shadow-md active:scale-95"
+                style={{ background: dark ? 'rgba(255,255,255,0.07)' : 'rgba(255,255,255,0.9)', border: sidebarBorder, color: fg }}
+              >
+                <Filter className="w-4 h-4" />
+                <span>Filters</span>
+                <ChevronDown className="w-3 h-3 opacity-50" />
+              </button>
             </div>
           </div>
 
@@ -183,7 +193,7 @@ function KitsStandardContent() {
 export default function KitsStandardPage() {
   return (
     <ThemeProvider>
-      <PageShell backTo="Kits" backLabel="Back to Kits" stickyUntilFooter={true} hideFooter={true}>
+      <PageShell backTo="kits" backLabel="Back to Kits" stickyUntilFooter={true} hideFooter={true}>
         <KitsStandardContent />
         <ThemeCustomizer />
       </PageShell>

@@ -9,7 +9,7 @@ export const navigations = [
       <div className="w-full bg-white rounded-xl shadow-lg px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
-            <span className="text-xl font-bold bg-gradient-to-r from-theme-primary to-theme-secondary bg-clip-text text-transparent">FluidUI</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-theme-primary to-theme-secondary bg-clip-text text-transparent">LiqUId</span>
             <nav className="hidden md:flex items-center gap-6">
               <a href="#" className="text-slate-600 hover:text-theme-primary font-medium">Home</a>
               <a href="#" className="text-slate-600 hover:text-theme-primary font-medium">Products</a>
@@ -27,7 +27,7 @@ export const navigations = [
     code: `<nav className="w-full bg-white rounded-xl shadow-lg px-6 py-4">
   <div className="flex items-center justify-between">
     <div className="flex items-center gap-8">
-      <span className="text-xl font-bold bg-gradient-to-r from-theme-primary to-theme-secondary bg-clip-text text-transparent">FluidUI</span>
+      <span className="text-xl font-bold bg-gradient-to-r from-theme-primary to-theme-secondary bg-clip-text text-transparent">LiqUId</span>
       <nav className="hidden md:flex items-center gap-6">
         <a href="#" className="text-slate-600 hover:text-theme-primary">Home</a>
         <a href="#" className="text-slate-600 hover:text-theme-primary">Products</a>
@@ -44,7 +44,7 @@ export const navigations = [
     component: (
       <div className="w-full bg-white rounded-xl shadow-lg px-6 py-4">
         <div className="flex items-center justify-between">
-          <span className="text-xl font-bold bg-gradient-to-r from-theme-primary to-theme-secondary bg-clip-text text-transparent">FluidUI</span>
+          <span className="text-xl font-bold bg-gradient-to-r from-theme-primary to-theme-secondary bg-clip-text text-transparent">LiqUId</span>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#" className="text-theme-primary font-medium">Home</a>
             <a href="#" className="text-slate-600 hover:text-theme-primary font-medium">Features</a>
@@ -60,7 +60,7 @@ export const navigations = [
     ),
     code: `<nav className="w-full bg-white rounded-xl shadow-lg px-6 py-4">
   <div className="flex items-center justify-between">
-    <span className="text-xl font-bold bg-gradient-to-r from-theme-primary to-theme-secondary bg-clip-text text-transparent">FluidUI</span>
+    <span className="text-xl font-bold bg-gradient-to-r from-theme-primary to-theme-secondary bg-clip-text text-transparent">LiqUId</span>
     <nav className="hidden md:flex items-center gap-8">
       <a href="#" className="text-theme-primary font-medium">Home</a>
       <a href="#" className="text-slate-600 hover:text-theme-primary font-medium">Features</a>
@@ -80,9 +80,9 @@ export const navigations = [
       <div className="w-64 bg-slate-900 rounded-xl shadow-lg p-4 h-96">
         <div className="flex items-center gap-3 px-3 mb-8">
           <div className="w-8 h-8 bg-theme-primary rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">F</span>
+            <span className="text-white font-bold text-sm">L</span>
           </div>
-          <span className="text-white font-semibold">FluidUI</span>
+          <span className="text-white font-semibold">LiqUId</span>
         </div>
         <nav className="space-y-1">
           <a href="#" className="flex items-center gap-3 px-3 py-2.5 bg-theme-primary/20 text-theme-primary rounded-lg">
@@ -120,9 +120,9 @@ export const navigations = [
     code: `<div className="w-64 bg-slate-900 rounded-xl shadow-lg p-4">
   <div className="flex items-center gap-3 px-3 mb-8">
     <div className="w-8 h-8 bg-theme-primary rounded-lg flex items-center justify-center">
-      <span className="text-white font-bold text-sm">F</span>
+      <span className="text-white font-bold text-sm">L</span>
     </div>
-    <span className="text-white font-semibold">FluidUI</span>
+    <span className="text-white font-semibold">LiqUId</span>
   </div>
   <nav className="space-y-1">
     <a className="flex items-center gap-3 px-3 py-2.5 bg-theme-primary/20 text-theme-primary rounded-lg">
@@ -352,7 +352,7 @@ export const navigations = [
     component: (
       <div className="w-full bg-white rounded-xl shadow-lg px-6 py-4">
         <div className="flex items-center gap-6">
-          <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">FluidUI</span>
+          <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">LiqUId</span>
           <div className="flex-1 relative max-w-md">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
             <input type="text" placeholder="Search..." className="w-full pl-12 pr-4 py-2.5 bg-slate-100 rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white" />
@@ -369,7 +369,7 @@ export const navigations = [
     ),
     code: `<header className="w-full bg-white rounded-xl shadow-lg px-6 py-4">
   <div className="flex items-center gap-6">
-    <span className="text-xl font-bold">FluidUI</span>
+    <span className="text-xl font-bold">LiqUId</span>
     <div className="flex-1 relative max-w-md">
       <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
       <input placeholder="Search..." className="w-full pl-12 pr-4 py-2.5 bg-slate-100 rounded-full" />

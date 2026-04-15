@@ -14,8 +14,7 @@ import {
   Users,
   Award,
   Search,
-  ArrowLeft,
-  ChevronRight
+  ArrowLeft
 } from 'lucide-react';
 
 import ComponentCard from '../components/ui-kit/ComponentCard';
@@ -72,13 +71,13 @@ export default function ComponentsPage() {
       <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link to={createPageUrl('Home')} className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors">
+            <Link to={createPageUrl('home')} className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors">
               <ArrowLeft className="w-5 h-5" />
               <span className="font-medium">Back</span>
             </Link>
             <div className="h-6 w-px bg-slate-200" />
             <h1 className="text-xl font-bold">
-              <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Fluid</span>UI
+              <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Liq</span>UId
             </h1>
           </div>
           

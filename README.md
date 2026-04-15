@@ -1,50 +1,52 @@
-# LiqUId Design System
+# LiqUId - Premium React Component Library
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-19-blue.svg)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38B2AC.svg)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 
-**LiqUId** is a professional, glossy, and high-performance design system for modern web products. Built with **React 19**, **Tailwind CSS v4**, and **Motion 12**, it provides a curated collection of components that are as beautiful as they are fast.
+**LiqUId** is a high-performance, production-ready UI component library built with React and Tailwind CSS. Designed for developers who demand both speed and aesthetic excellence, LiqUId provides a comprehensive suite of 100+ modular components that are fully customizable and accessible.
 
-## ✨ Features
+## ✨ Key Features
 
-- 💎 **Glassmorphism**: High-end backdrop blur effects and fluid gradients.
-- 🚀 **Performance First**: Zero runtime overhead with Tailwind v4 and optimized Motion animations.
-- 🎨 **Dark Mode**: Native support for light and dark themes with smooth transitions.
-- 📦 **Copy-Paste Ready**: Get both React (Motion) and pure HTML/CSS code for every component.
-- 🛠️ **Resource Kits**: Curated collections of templates, icons, and components.
-- 📱 **Fully Responsive**: Every component is tested across all modern screen sizes.
-- ♿ **Accessible**: Completely free and open source, built on the MIT License.
+- 🚀 **100+ Modular Components**: From essential buttons to complex landing page sections.
+- 🎨 **Themeable Architecture**: Built-in theme engine with support for custom colors, typography, and border radius.
+- 🌓 **Native Dark Mode**: Seamless dark mode support across all components.
+- 📱 **Fully Responsive**: Optimized for every screen size, from mobile to ultra-wide desktop.
+- ⚡ **Performance First**: Zero-runtime CSS and optimized asset delivery.
+- 🛠️ **Developer Friendly**: Clean, well-documented code with full TypeScript support.
+- 💎 **Premium Icon Kit**: Access to 200+ high-quality icons in Mono, Flat, and 3D styles.
 
 
-### Usage
+## 📦 Component Categories
 
-1. Go to the [LiqUId Components Library](https://liquid.nishantgits.com/components) (or run this project locally).
-2. Browse the components.
-3. Select either the **React** or **HTML/CSS** tab.
-4. Click **Copy** and paste the code into your project.
+- **Navigation**: Navbars, Sidebars, Breadcrumbs, Pagination.
+- **Forms & Inputs**: Text fields, Selects, Checkboxes, Multi-step forms.
+- **Data Display**: Cards, Tables, Badges, Avatars.
+- **Feedback**: Alerts, Toasts, Progress bars.
+- **Marketing**: Hero sections, Feature grids, Testimonials, Pricing tables.
+- **Email**: Responsive email templates for transactional and marketing use.
 
-## 🛠️ Components
+## 🎨 Customization
 
-LiqUId includes a wide range of components:
-- **Bento Grids**: Modern feature showcases.
-- **Glossy Cards**: Glassmorphism-based containers.
-- **Pricing Tables**: High-conversion pricing layouts.
-- **Marquees**: Smooth, infinite scrolling testimonials.
-- **Liquid Buttons**: Interactive, fluid action elements.
-- **Glowing Inputs**: High-end form elements.
+LiqUId is designed to be highly flexible. You can customize the entire library's look and feel directly through our interactive playground:
 
-## 📄 License
+- **Live Theming**: Click the **Color Palette** icon in the interface to experiment with different color schemes and typography in real-time.
+- **Visual Styles**: Toggle between various border-radius settings and shadow depths to match your brand's aesthetic.
+- **Export CSS**: Once you're satisfied with your theme, you can export the generated CSS variables to use in your own project.
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This approach ensures you get a perfect visual match before you even start coding.
 
 ## 👤 Author
 
 **NishantGits**
-- Website: [nishantgits.github.io](https://nishantgits.github.io)
+- Website: [liquid-design.vercel.app](https://liquid-design.vercel.app)
 - GitHub: [@NishantGits](https://github.com/NishantGits)
-- Repository: [github.com/NishantGits/liquid](https://github.com/NishantGits/liquid)
+- Repository: [github.com/NishantGits/LiqUId](https://github.com/NishantGits/LiqUId)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
 
 ---
 
-© 2026 LiqUId and NishantGits. Built with ❤️ for the modern web.
+Made with ❤️ by the **LiqUId** team.

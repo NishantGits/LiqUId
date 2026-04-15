@@ -137,7 +137,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-4 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-bold mb-4">FluidUI</h3>
+              <h3 className="text-xl font-bold mb-4">LiqUId</h3>
               <p className="text-slate-400">Building beautiful products.</p>
             </div>
             <div>
@@ -163,7 +163,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-center text-slate-400">
-            <p>© 2024 FluidUI. All rights reserved.</p>
+            <p>© 2026 LiqUId and NishantGits. All rights reserved.</p>
           </div>
         </div>
       </footer>
@@ -185,13 +185,13 @@ export default function LandingPage() {
         <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <Link to={createPageUrl('Home')} className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors">
+            <Link to={createPageUrl('home')} className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors">
               <ArrowLeft className="w-5 h-5" />
               <span className="font-medium">Back</span>
             </Link>
             <div className="h-6 w-px bg-slate-200" />
             <h1 className="text-xl font-bold">
-              <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Fluid</span>UI
+              <span className="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Liq</span>UId
               <span className="text-slate-400 font-normal ml-2">/ Landing Kit</span>
             </h1>
           </div>
@@ -411,7 +411,7 @@ export default function LandingPage() {
                 <div className="absolute bottom-0 left-0 w-60 h-60 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
                 <div className="relative z-10">
                   <h2 className="text-4xl font-bold text-white mb-4">Ready to get started?</h2>
-                  <p className="text-xl text-indigo-100 mb-8 max-w-xl mx-auto">Join thousands of teams already using FluidUI to build amazing products.</p>
+                  <p className="text-xl text-indigo-100 mb-8 max-w-xl mx-auto">Join thousands of teams already using LiqUId to build amazing products.</p>
                   <div className="flex items-center justify-center gap-4">
                     <button className="px-8 py-4 bg-white text-indigo-600 font-medium rounded-xl hover:bg-indigo-50 transition-all">
                       Start Free Trial
@@ -465,16 +465,16 @@ export default function LandingPage() {
                   <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-2xl flex items-center justify-center shadow-xl shadow-indigo-500/20">
                     <Zap className="w-7 h-7 text-white" />
                   </div>
-                  <span className="text-3xl font-bold tracking-tight">FluidUI</span>
+                  <span className="text-3xl font-bold tracking-tight">LiqUId</span>
                 </div>
                 <p className="text-slate-400 mb-10 max-w-sm text-lg leading-relaxed">
                   The ultimate component library for modern web applications. Build faster, ship sooner, and delight your users.
                 </p>
                 <div className="flex items-center gap-5">
                   {[
-                    { icon: Github, href: '#', label: 'GitHub' },
-                    { icon: Mail, href: '#', label: 'Email' },
-                    { icon: Star, href: '#', label: 'Star on GitHub' }
+                    { icon: Github, href: 'https://github.com/NishantGits/LiqUId', label: 'GitHub' },
+                    { icon: Mail, href: 'mailto:contact@liquid-design.vercel.app', label: 'Email' },
+                    { icon: Star, href: 'https://github.com/NishantGits/LiqUId', label: 'Star on GitHub' }
                   ].map((social, i) => (
                     <a 
                       key={i} 
@@ -537,7 +537,7 @@ export default function LandingPage() {
                 <div className="w-8 h-8 bg-indigo-500/10 rounded-lg flex items-center justify-center">
                   <Zap className="w-4 h-4 text-indigo-400" />
                 </div>
-                <p className="text-sm text-slate-500 font-medium tracking-wide">© 2026 FluidUI. Designed for the future.</p>
+                <p className="text-sm text-slate-500 font-medium tracking-wide">© 2026 LiqUId and NishantGits. All rights reserved.</p>
               </div>
               <div className="flex items-center gap-10">
                 {['Twitter', 'GitHub', 'LinkedIn', 'Discord', 'Dribbble'].map(social => (

@@ -26,7 +26,7 @@ export const ctas = [
     component: (
       <div className="bg-slate-900 rounded-theme p-8 flex items-center justify-between max-w-3xl">
         <div className="text-white">
-          <h3 className="text-xl font-bold mb-2">Build faster with FluidUI</h3>
+          <h3 className="text-xl font-bold mb-2">Build faster with LiqUId</h3>
           <p className="text-slate-400">Over 100+ components ready to use</p>
         </div>
         <button className="px-6 py-3 bg-theme-primary text-white rounded-theme font-medium flex items-center gap-2 hover:opacity-90 transition-all">
@@ -36,7 +36,7 @@ export const ctas = [
     ),
     code: `<div class="bg-slate-900 rounded-theme p-8 flex items-center justify-between max-w-3xl">
   <div class="text-white">
-    <h3 class="text-xl font-bold mb-2">Build faster with FluidUI</h3>
+    <h3 class="text-xl font-bold mb-2">Build faster with LiqUId</h3>
     <p class="text-slate-400">Over 100+ components ready to use</p>
   </div>
   <button class="px-6 py-3 bg-theme-primary text-white rounded-theme font-medium hover:opacity-90 transition-all">Get Started →</button>
@@ -208,7 +208,7 @@ export const ctas = [
     title: 'Video CTA',
     component: (
       <div className="bg-slate-900 rounded-2xl p-8 text-center text-white max-w-2xl">
-        <h3 className="text-2xl font-bold mb-3">See FluidUI in Action</h3>
+        <h3 className="text-2xl font-bold mb-3">See LiqUId in Action</h3>
         <p className="text-slate-400 mb-6">Watch our 2-minute demo video</p>
         <button className="px-6 py-3 bg-white text-slate-900 rounded-xl font-medium flex items-center gap-2 mx-auto">
           <span className="text-xl">▶</span> Watch Demo
@@ -216,7 +216,7 @@ export const ctas = [
       </div>
     ),
     code: `<div class="bg-slate-900 rounded-2xl p-8 text-center text-white max-w-2xl">
-  <h3 class="text-2xl font-bold mb-3">See FluidUI in Action</h3>
+  <h3 class="text-2xl font-bold mb-3">See LiqUId in Action</h3>
   <p class="text-slate-400 mb-6">Watch our 2-minute demo video</p>
   <button class="px-6 py-3 bg-white text-slate-900 rounded-xl font-medium flex items-center gap-2 mx-auto">
     <span class="text-xl">▶</span> Watch Demo

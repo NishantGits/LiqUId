@@ -1,23 +1,10 @@
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
-import { buttons } from '../ui-kit/buttons/ButtonComponents';
-import { cards } from '../ui-kit/cards/CardComponents';
-import { inputs } from '../ui-kit/inputs/InputComponents';
-import { forms } from '../ui-kit/forms/FormComponents';
-import { navigations } from '../ui-kit/navigation/NavigationComponents';
-import { alerts } from '../ui-kit/alerts/AlertComponents';
-import { logins } from '../ui-kit/logins/LoginComponents';
-import { sections } from '../ui-kit/sections/SectionComponents';
-import { badges } from '../ui-kit/badges/BadgeComponents';
-import { avatars } from '../ui-kit/avatars/AvatarComponents';
-import { emails } from '../ui-kit/emails/EmailComponents';
-import { ctas } from '../ui-kit/ctas/CTAComponents';
-import { heroes } from '../ui-kit/heroes/HeroComponents';
 
 const packageJson = `{
-  "name": "fluidui-components",
+  "name": "liquid-components",
   "version": "1.0.0",
-  "description": "FluidUI - Free & Open Source UI Component Library",
+  "description": "LiqUId - Free & Open Source UI Component Library",
   "dependencies": {
     "react": "^18.2.0",
     "lucide-react": "latest",
@@ -27,7 +14,7 @@ const packageJson = `{
   "license": "MIT"
 }`;
 
-const readme = `# FluidUI Components
+const readme = `# LiqUId Components
 
 A beautiful collection of 100+ production-ready UI components built with React & Tailwind CSS.
 
@@ -68,11 +55,11 @@ MIT License - Free to use in personal and commercial projects.
 
 ## 💖 Support
 
-Star us on GitHub: https://github.com/fluidui/components
+Star us on GitHub: https://github.com/NishantGits/LiqUId
 
 ---
 
-Made with ❤️ by the FluidUI team
+Made with ❤️ by the LiqUId team
 `;
 
 const tailwindConfig = `/** @type {import('tailwindcss').Config} */
@@ -232,7 +219,7 @@ export async function downloadAllComponents() {
 
   // Generate and download
   const content = await zip.generateAsync({ type: 'blob' });
-  saveAs(content, 'fluidui-components.zip');
+  saveAs(content, 'liquid-components.zip');
   
   return true;
 }

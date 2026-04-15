@@ -27,10 +27,9 @@ const categories = [
 ];
 
 const navLinks = [
-  { label: 'Components', to: 'KitsStandard' },
-  { label: 'Templates',  to: 'Kits' },
-  { label: 'Showcase',   to: '#' },
-  { label: 'Docs',       to: 'Docs' },
+  { label: 'Components', to: 'kits/standard' },
+  { label: 'Contribution', to: 'contribution' },
+  { label: 'Docs',       to: 'docs' },
 ];
 
 // Animated liquid blob
@@ -103,8 +102,9 @@ export default function HomePage() {
         />
       </div>
 
-      {/* ── NAVBAR ────────────────────────────────────────────── */}
-      <motion.header
+      <div className="relative">
+        {/* ── NAVBAR ────────────────────────────────────────────── */}
+        <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -166,7 +166,7 @@ export default function HomePage() {
               {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
             <a
-              href="https://github.com"
+              href="https://github.com/NishantGits/LiqUId"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105"
@@ -201,7 +201,7 @@ export default function HomePage() {
             }}
           >
             <span className="w-2 h-2 rounded-full bg-[#06b6d4] animate-pulse" />
-            LiqUId v2.0 is now live
+            LiqUId is now live
           </motion.div>
 
           {/* Headline */}
@@ -246,7 +246,7 @@ export default function HomePage() {
             className="flex items-center justify-center gap-4 flex-wrap"
           >
             <Link
-              to={createPageUrl('Kits')}
+              to={createPageUrl('kits')}
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-base transition-all duration-300 hover:scale-105 hover:shadow-xl"
               style={{
                 background: dark ? '#f8fafc' : '#0f172a',
@@ -257,7 +257,7 @@ export default function HomePage() {
               Get Started Free <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              to={createPageUrl('Kits')}
+              to={createPageUrl('kits')}
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-base transition-all duration-300 hover:scale-105"
               style={{
                 background: dark ? 'rgba(255,255,255,0.07)' : 'rgba(255,255,255,0.9)',
@@ -334,7 +334,7 @@ export default function HomePage() {
             whileHover={{ y: -5 }}
           >
             <Link
-              to={createPageUrl('KitsStandard')}
+              to={createPageUrl('kits/standard')}
               className="block rounded-[2.5rem] p-8 group transition-all duration-500 hover:shadow-2xl glass relative overflow-hidden"
               style={{ border: cardBorder, boxShadow: dark ? '0 8px 32px 0 rgba(0,0,0,0.3)' : '0 8px 32px 0 rgba(31,38,135,0.07)' }}
             >
@@ -364,7 +364,7 @@ export default function HomePage() {
             whileHover={{ y: -5 }}
           >
             <Link
-              to={createPageUrl('IconKit')}
+              to={createPageUrl('kits/icon')}
               className="block rounded-[2.5rem] p-8 group transition-all duration-500 hover:shadow-2xl glass relative overflow-hidden"
               style={{ border: cardBorder, boxShadow: dark ? '0 8px 32px 0 rgba(0,0,0,0.3)' : '0 8px 32px 0 rgba(31,38,135,0.07)' }}
             >
@@ -494,7 +494,7 @@ export default function HomePage() {
             Start using LiqUId components in your next project.
           </p>
           <Link
-            to={createPageUrl('Kits')}
+            to={createPageUrl('kits')}
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-base transition-all duration-300 hover:scale-105"
             style={{
               background: dark ? '#f8fafc' : '#0f172a',
@@ -505,8 +505,9 @@ export default function HomePage() {
           </Link>
         </motion.div>
       </section>
+    </div>
 
-      {/* ── FOOTER ────────────────────────────────────────────── */}
+    {/* ── FOOTER ────────────────────────────────────────────── */}
       <footer
         className="relative z-10 py-10"
         style={{ borderTop: dark ? '1px solid rgba(255,255,255,0.07)' : '1px solid rgba(0,0,0,0.06)' }}
@@ -525,7 +526,7 @@ export default function HomePage() {
             </span>
           </div>
           <p className="text-sm font-light" style={{ color: dark ? '#475569' : '#94a3b8' }}>
-            © 2026 LiqUId. All rights reserved.
+            © 2026 LiqUId and NishantGits. All rights reserved.
           </p>
         </div>
       </footer>
